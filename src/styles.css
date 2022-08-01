@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
+ul{
+  background: black
+  /* li{...} */
+  }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 1200px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -21,7 +26,7 @@ body {
   border-radius: 5px;
 }
 .btn {
-  display: inline-block;
+  /* display: inline-block; */
   background: #000;
   color: #fff;
   border: none;
