@@ -1,4 +1,4 @@
-<div class="task">
+<div [ngClass]="{ready: task.ready}" class="task">
     <h2>{{task.text}}<fa-icon (click) = "onDelete(task)" [ngStyle]="{'float':'right'}" [icon]="faTimes"></fa-icon></h2>
     <h2><fa-icon (click) = "onReady(task)" [ngStyle]="{'float':'right'}" [icon]="faCheck"></fa-icon></h2>
 

@@ -5,7 +5,7 @@
     cursor: pointer;
   }
   
-  .task.reminder {
+  .task.ready {
     border-left: 5px solid green;
   }
   

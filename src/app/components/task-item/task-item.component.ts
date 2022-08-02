@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Output,  EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { ReadKeyExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-task-item',
@@ -13,6 +14,8 @@ export class TaskItemComponent implements OnInit {
 
   @Input() task : Task;
 @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+@Output() onReadyTask: EventEmitter<Task> = new EventEmitter();
+
 
   faTimes = faTimes;
   faCheck = faCheck;
@@ -23,7 +26,7 @@ export class TaskItemComponent implements OnInit {
     this.onDeleteTask.emit(task);
   }
   onReady(task){
-    console.log(task);
+    this.onReadyTask.emit(task);
   }
 
   ngOnInit(): void {
