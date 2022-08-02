@@ -16,6 +16,7 @@ export class AddTaskComponent implements OnInit {
   day:string;
   showAddTask: boolean;
   subscription: Subscription;
+  ready : boolean= false;
 
   constructor(private uiService: UIService) {
     this.subscription = this.uiService.onToggle().subscribe(value =>this.showAddTask = value);
@@ -29,15 +30,15 @@ export class AddTaskComponent implements OnInit {
     const newTask = {
       text: this.text,
       note: this.note,
-      // note: this.note,
-      day :this.day
+      day :this.day,
+      ready : this.ready
     }
     this.addTask.emit(newTask);
 
     this.text = '';
     this.note = '';
     this.day = '';
-
+this.ready = false;
   }
   
   ngOnInit(): void {

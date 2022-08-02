@@ -7,16 +7,11 @@
       "day": "May 5th at 2:30pm"
     },
     {
-      "text": "Noooo",
-      "note": "But how",
-      "day": "September 4",
-      "id": "BFqB5Yo"
-    },
-    {
-      "text": "OHYeah",
-      "note": "note1",
-      "day": "04/45/45",
-      "id": "8vRnWm2"
+      "text": "Noway",
+      "note": "Is",
+      "day": "12/12/1212",
+      "ready": false,
+      "id": "ndJhPZ4"
     }
   ]
 }
