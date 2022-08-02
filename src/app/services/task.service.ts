@@ -4,6 +4,12 @@ import { TASKS } from 'src/app/alltasks';
 import { Task } from 'src/app/Task';
 import { from, Observable, of } from 'rxjs';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,5 +29,9 @@ export class TaskService {
   {
 const url = `${this.apiUrl}/${task.id}`;
 return this.http.delete<Task>(url);
+  }
+
+  addTask(task: Task):Observable<Task>{
+    return this.http.post<Task>(this.apiUrl, task,httpOptions);
   }
 }
